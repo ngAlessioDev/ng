@@ -1,0 +1,9 @@
+<h1>Crea Studente</h1>
+<input type="number" [(ngModel)]="STID" placeholder="Matricola">
+<input type="text" [(ngModel)]="STNOME" placeholder="Nome studente">
+<select name="" [(ngModel)]="STCORSO">
+  <option value="Angular">Angular</option>
+  <option value="VueJs">VueJs</option>
+  <option value="React">React</option>
+</select>
+<button type="submit" (click)="onNewStudent()">Aggiungi</button>

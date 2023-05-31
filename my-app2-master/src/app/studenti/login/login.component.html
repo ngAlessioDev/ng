@@ -1,0 +1,15 @@
+<app-nav-bar [ngClass]="{'noAUTH': !login, 'AUTH': login}"></app-nav-bar>
+
+
+<div [ngClass]="{'container-login': !login, 'container-loginAUTH': login}">
+  <div class="login-box">
+    <input type="text" [(ngModel)]="nomeUtenteLOG" placeholder="Nome Utente">
+    <input type="text" [(ngModel)]="ruoloUtenteLOG" placeholder="Ruolo">
+    <button type="submit" (click)="controllo()">Accedi</button>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>
+
+<!-- github -->

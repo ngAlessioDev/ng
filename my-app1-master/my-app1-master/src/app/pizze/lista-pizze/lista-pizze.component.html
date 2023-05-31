@@ -1,0 +1,7 @@
+<!-- lista-pizze.component.html -->
+<h3>Lista Pizze</h3>
+
+<div *ngFor="let pizza of pizze">
+  <h4>{{ pizza.nome }}</h4>
+  <a routerLink="/pizza/{{pizza.nome}}">Vai ai dettagli</a>
+</div>

@@ -1,0 +1,7 @@
+<div>
+  ID: {{ id }} <br>
+  Nome: {{ nome }} <br>
+  Corso: {{ corso }} <br>
+  <h3 *ngIf="status == 'true'">Esito: Promosso</h3>
+  <h3 *ngIf="status == 'false'">Esito: Bocciato</h3>
+</div>
