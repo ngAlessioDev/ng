@@ -1,0 +1,28 @@
+<h3>Movies</h3>
+<select class="form-select" [(ngModel)]="typeQuery">
+  <option value="movie">Films</option>
+  <option value="series">Serie</option>
+</select>
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+    aria-describedby="button-addon1" [(ngModel)]="searchQuery">
+  <button class="btn btn-outline-secondary" type="button" id="button-addon1" (click)="cerca()">Cerca</button>
+</div>
+
+<div *ngIf="!searchResponse">
+  Specificare una query di ricerca a premere CERCA
+</div>
+<div *ngIf="searchResponse">
+  <h3>Risultati {{searchResponse.Search.length}} di {{searchResponse.totalResults}}</h3>
+
+  <div class="d-flex flex-row flex-wrap gap-3">
+    <div *ngFor="let movie of searchResponse.Search" class="card mb-3" style="width: 18rem;">
+      <img [src]="movie.Poster" class="card-img-top" [alt]="movie.Title">
+      <div class="card-body">
+        <h5 class="card-title">{{movie.Title}}</h5>
+        <h6 class="card-subtitle text-body-secondary">{{movie.Type}}</h6>
+        <a routerLink="/movies/{{movie.imdbID}}" class="btn btn-primary">Dimmi di più!</a>
+      </div>
+    </div>
+  </div>
+</div>
