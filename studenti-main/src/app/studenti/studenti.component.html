@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="list-group">
+      <a
+        class="list-group-item list-group-item-action"
+        [routerLink]="[
+          '/studenti',
+          studente.id,
+          studente.nome,
+          studente.corso,
+          studente.status
+        ]"
+        *ngFor="let studente of listaStudenti"
+      >
+        {{ studente.nome }}
+        <span
+          [ngClass]="{
+            red: studente.corso == 'Angular',
+            green: studente.corso == 'Java',
+            viola: studente.corso == 'Javascript'
+          }"
+          ><i class="bi bi-bar-chart-line-fill"></i
+        ></span>
+      </a>
+    </div>
+  </div>
+  <br /><br />
+
+  <div class="col-md-4">
+    <h2>Filtro studenti:</h2>
+
+    <label for="multipleSelect">Select materia: </label><br />
+    <select name="multipleSelect" [(ngModel)]="selected">
+      <option value="Angular">Angular</option>
+      <option value="Java">Java</option>
+      <option value="Javascript">Javascript</option></select
+    ><br /><br /><br />
+
+    <div *ngFor="let studente of listaStudenti">
+      <div *ngIf="studente.corso == selected">
+        <ul>
+          <li
+            [ngClass]="{
+              red: studente.corso == 'Angular',
+              green: studente.corso == 'Java',
+              viola: studente.corso == 'Javascript'
+            }"
+          >
+            {{ studente.nome }} {{ studente.corso }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+  <hr />
+  <br /><br />
+  <div>
+    <a class="link-info" (click)="redirect()">Registrare nuovo studente</a>
+  </div>
+
+  <div class="col-md-4">
+    <!-- Dentro questo router outlet vengono renderizzare le sottorotte, cioè le rotte figlie -->
+    <router-outlet></router-outlet>
+  </div>
+</div>

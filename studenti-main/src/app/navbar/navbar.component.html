@@ -1,0 +1,11 @@
+<nav class="nav justify-content-center">
+  <!-- routerLink semplice insegue solo le rotte -->
+  <a class="nav-link" routerLink="/">Home</a>
+  <!-- [routerLink] non solo passa le rotte ma tutti i tipi di frammenti possibili -->
+  <a class="nav-link" [routerLink]="['/studenti']">Studenti</a>
+  <a class="nav-link" [routerLink]="['/corsi']">Corsi</a>
+  <a class="nav-link" [routerLink]="['/docenti']">Docenti</a>
+  <a class="nav-link" [routerLink]="['/newStudente']"
+    >Registrare nuovo studente</a
+  >
+</nav>

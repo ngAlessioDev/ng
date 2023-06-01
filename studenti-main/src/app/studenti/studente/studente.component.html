@@ -1,0 +1,12 @@
+<div class="card text-start">
+
+  <div class="card-body">
+    <h4 class="card-title">{{nome}}</h4>
+    <p class="card-text">{{id}}</p>
+    <p class="card-text" *ngIf="status === 'true'">
+      promosso
+    </p>
+
+    <a class="card-text" (click)="onGoToCorso()">{{corso}}</a>
+  </div>
+</div>

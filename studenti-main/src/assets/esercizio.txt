@@ -1,0 +1,9 @@
+1. inserire rotta PageNotFound
+2. Aggiungi nuovi studenti con gli stessi corsi
+
+3. Con una select filtra gli studenti per materia e assegna un colore ad ogni materia e mostra un pallino dello stesso colore accanto al singolo nome studente. (npm install bootstrap-icons) [import in angular json, sotto bootstrap: "node_modules/bootstrap-icons/font/bootstrap-icons.css"]
+
+4. Crea un component per l'aggiunta di nuovi studenti. Questo component verrà mostrato in un'altra pagina, un'altra rotta.
+
+5. Creare un component Login per l'accesso alla piattaforma.
+  Model Utente (username, password, role)

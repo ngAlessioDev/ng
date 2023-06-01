@@ -1,0 +1,27 @@
+<div>
+  <div class="form-group">
+    <label for="form">ID</label>
+    <input type="number" class="form-control" [(ngModel)]="idStudente" />
+
+    <label for="form">Nome</label>
+    <input type="text" class="form-control" [(ngModel)]="nomeStudente" />
+
+    <label for="form">Corso</label>
+    <input type="text" class="form-control" [(ngModel)]="corsoStudente" />
+    <br />
+    <label for="form">Status</label>
+    <select [(ngModel)]="statusStudente">
+      <option [ngValue]="false">false</option>
+      <option [ngValue]="true">true</option>
+    </select>
+  </div>
+  <br />
+  <button
+    type="submit"
+    class="btn btn-success"
+    (click)="onAddStudente()"
+    [routerLink]="['/studenti']"
+  >
+    Submit
+  </button>
+</div>
