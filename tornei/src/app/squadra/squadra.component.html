@@ -1,0 +1,6 @@
+<div *ngIf="squadra" class="squadra">
+  <app-giocatore
+    *ngFor="let g of squadra.giocatori"
+    [giocatore]="g"
+  ></app-giocatore>
+</div>

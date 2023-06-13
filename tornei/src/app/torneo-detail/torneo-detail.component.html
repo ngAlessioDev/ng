@@ -1,0 +1,7 @@
+<!-- <pre *ngIf="torneo">
+ marcatore pre formatta in modo più ordinato il testo -->
+<!-- {{ torneo | json }} -->
+<!-- </pre>  -->
+<div *ngIf="torneo">
+  <app-partita *ngFor="let p of torneo.partite" [partita]="p"></app-partita>
+</div>

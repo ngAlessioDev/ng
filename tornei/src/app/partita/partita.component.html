@@ -1,0 +1,15 @@
+<div *ngIf="partita" class="partita">
+  <h1>{{ partita.data * 1000 | date }}</h1>
+  <div>
+    <h3>Casa</h3>
+    <app-squadra [squadra]="partita.squadraCasa"></app-squadra>
+    <h4>{{ partita.punteggioCasa }}</h4>
+  </div>
+  <hr />
+
+  <div>
+    <h3>Trasferta</h3>
+    <app-squadra [squadra]="partita.squadraTrasferta"></app-squadra>
+    <h4>{{ partita.punteggioTrasferta }}</h4>
+  </div>
+</div>
